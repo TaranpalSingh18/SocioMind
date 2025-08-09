@@ -1,0 +1,13 @@
+flask
+flask-cors
+bs4
+requests
+jsonify
+langchain-groq
+langchain-huggingface
+langchain-community
+dotenv
+langchain
+faiss-cpu
+sentence-transformers
+
