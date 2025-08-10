@@ -12,7 +12,6 @@ load_dotenv()
 groq_api_key = os.getenv('GROQ_API_KEY')
 
 def get_response(payload: ContentModel):
-    # Extract data from payload
     business_profile = payload.business_profile
     industry_news = payload.industry_news
     tone = payload.tone

@@ -1,11 +1,19 @@
-from flask import Blueprint, request, jsonify
-import requests
-from bs4 import BeautifulSoup
+from flask import Blueprint, jsonify
 
-facebook_router = Blueprint('facebook_api', __name__)
-
-@facebook_router.route('/', methods=['GET'])
-def get_business_data():
-    return jsonify({"message":"Hello Facebook Router"})
+facebook_router = Blueprint("facebook_router",__name__)
 
 
+@facebook_router.route("/connect", methods = ["POST"])
+def facebook_connection():
+    return jsonify([
+        "message: Success",
+        "Token: abc1234"
+    ])
+
+
+@facebook_router.route("/", methods = ["GET"])
+def health_update():
+    return jsonify([
+        "message: Health Update",
+        "status: The route is healthy"
+    ])
