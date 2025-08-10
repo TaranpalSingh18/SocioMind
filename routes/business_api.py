@@ -138,11 +138,7 @@ def extract_business_data():
 
 @business_router.route('/extract-get', methods=['GET'])
 def extract_business_data_get():
-    """
-    Extract business information from a URL passed as query parameter
-    
-    Usage: GET /extract-get?url=https://example.com
-    """
+
     try:
         url = request.args.get('url')
         
@@ -170,7 +166,6 @@ def extract_business_data_get():
 
 @business_router.route('/health', methods=['GET'])
 def health_check():
-    """Health check endpoint"""
     return jsonify({
         "status": "healthy",
         "service": "Business Information Extractor API"
