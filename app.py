@@ -5,7 +5,7 @@ from routes.business_api import business_router
 from routes.content_api import content_router
 from routes.facebook import facebook_router
 from routes.news import news_router
-from routes.planner import planner_router
+from routes.preview import preview_router
 from routes.posts import post_router
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ app.register_blueprint(business_router, url_prefix='/business')
 app.register_blueprint(content_router, url_prefix='/content')
 app.register_blueprint(facebook_router, url_prefix='/facebook')
 app.register_blueprint(news_router, url_prefix='/news')
-app.register_blueprint(planner_router, url_prefix='/planner')
+app.register_blueprint(preview_router, url_prefix='/preview')
 app.register_blueprint(post_router, url_prefix='/post')
 
 app.get('/')

@@ -98,7 +98,7 @@ def get_content():
         payload = ContentModel(**data)
         response = get_response(payload)
         
-        return jsonify(response)  # FIXED: Return response directly, not wrapped
+        return jsonify(response)
     
     except Exception as e:
         return jsonify({"error": str(e)}), 400

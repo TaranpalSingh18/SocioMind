@@ -19,13 +19,16 @@ def post_frequency(payload: WeeklyModel):
         
         for j, day_num in enumerate(day_numbers, 1):
             posts_list.append({
-                days_of_week[day_num]: f"Post Number: {j}"
+                days_of_week[day_num]: {
+                    f"Post Number: {j}": f"Content of Post {j}"
+                }
             })
     else:
-
         for j, day in enumerate(days, 1):
             posts_list.append({
-                day: f"Post Number: {j}"
+                day: {
+                    f"Post Number: {j}": f"Content of Post {j}"
+                }
             })
 
     return posts_list  
