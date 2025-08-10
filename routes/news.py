@@ -10,7 +10,7 @@ from langchain_core.output_parsers import JsonOutputParser
 import json
 import os
 
-content_router = Blueprint("content", __name__)
+news_router = Blueprint("news_router", __name__)
 
 def get_news(keywords: list):
     final_list = []
@@ -115,7 +115,7 @@ def get_news(keywords: list):
         return {"error": f"Error in processing: {str(e)}", "traceback": traceback.format_exc()}
 
 
-@content_router.route('/health', methods=["GET"])
+@news_router.route('/health', methods=["GET"])
 def health_check():
     return jsonify({
         "response": "Content Router Health Check",
@@ -123,7 +123,7 @@ def health_check():
     })
 
 
-@content_router.route('/news', methods=["POST"])
+@news_router.route('/news', methods=["POST"])
 def get_news_endpoint():
     try:
         data = request.get_json()
@@ -145,7 +145,7 @@ def get_news_endpoint():
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
 
 
-@content_router.route('/news/<keyword>', methods=["GET"])
+@news_router.route('/<keyword>', methods=["GET"])
 def get_single_keyword_news(keyword):
     """
     Endpoint to get news for a single keyword via URL parameter

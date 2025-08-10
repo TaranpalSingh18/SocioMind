@@ -10,4 +10,8 @@ dotenv
 langchain
 faiss-cpu
 sentence-transformers
+pydantic
+sqlalchemy
+sqlalchemy-utils
+
 

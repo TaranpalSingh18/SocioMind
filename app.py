@@ -2,9 +2,9 @@ from flask import Flask
 from flask_cors import CORS
 
 from routes.business_api import business_router
-from routes.content import content_router
+from routes.content_api import content_router
 from routes.facebook import facebook_router
-from routes.news_api import news_router
+from routes.news import news_router
 from routes.planner import planner_router
 from routes.posts import post_router
 

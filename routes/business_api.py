@@ -125,7 +125,6 @@ def extract_business_data():
         
         result = extract_business_info(url)
         
-        # Check if there was an error
         if 'error' in result:
             return jsonify(result), 500
         
