@@ -89,7 +89,6 @@ def get_news(keywords: list):
             
             print(f"Attempting to parse JSON: {json_text[:100]}...")
             
-            # Parse JSON
             result = json.loads(json_text)
             print("Successfully parsed JSON")
             return result
