@@ -1,4 +1,4 @@
-# 🚀 **Growthzi AI Agent Backend**
+# 🚀 **SocioMind - AI-Powered Social Media Manager**
 
 ## 📋 **Project Overview**
 **Objective**: Build a backend system for an AI agent that creates and manages Facebook content for businesses. The agent simulates the capabilities of a smart social media manager: understand a business, stay updated on its industry, and generate lead-oriented posts that can be reviewed, edited, and published automatically.
@@ -472,12 +472,6 @@ CORS is enabled by default to allow frontend access from browsers.
 3. Make your changes
 4. Add tests if applicable
 5. Submit a pull request
-
----
-
-## 📄 **License**
-
-This project is part of the Growthzi Backend Developer Assignment.
 
 ---
 
